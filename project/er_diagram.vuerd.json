@@ -300,36 +300,13 @@
               "widthDefault": 60
             },
             "id": "ca58310a-d129-4892-914d-ccb9aad49f2b"
-          },
-          {
-            "name": "muse",
-            "comment": "",
-            "dataType": "",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "89d8947c-b690-4092-80c8-e8583709f0af"
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 731.9842,
           "top": 243.0318,
-          "zIndex": 28,
+          "zIndex": 29,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1314,7 +1291,7 @@
             "9fe6fa8d-2732-4aba-91f9-e9d59b7f201d"
           ],
           "x": 1210.8157429687499,
-          "y": 321.7818,
+          "y": 316.6568,
           "direction": "right"
         },
         "constraintName": "fk_engine_to_rockets",
@@ -1331,7 +1308,7 @@
             "2899d3c9-f9c8-4824-b345-25a3ec5d51f9"
           ],
           "x": 851.6920857421875,
-          "y": 558.0318,
+          "y": 537.5318,
           "direction": "bottom"
         },
         "end": {
@@ -1418,7 +1395,7 @@
             "8be23db3-20d2-4955-9aea-c02f0e2b14e6"
           ],
           "x": 1210.8157429687499,
-          "y": 479.2818,
+          "y": 463.9068,
           "direction": "right"
         },
         "constraintName": "fk_company_to_rockets",
@@ -1444,7 +1421,7 @@
             "d96c9df4-d7d4-42eb-8e2c-2f726e4bd3ee"
           ],
           "x": 731.9842,
-          "y": 400.5318,
+          "y": 390.2818,
           "direction": "left"
         },
         "constraintName": "fk_maximum reach_to_rockets",
@@ -1470,7 +1447,7 @@
             "ca58310a-d129-4892-914d-ccb9aad49f2b"
           ],
           "x": 1091.1078572265624,
-          "y": 558.0318,
+          "y": 537.5318,
           "direction": "bottom"
         },
         "constraintName": "fk_launch status_to_rockets",
