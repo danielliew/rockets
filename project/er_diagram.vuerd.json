@@ -3,15 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-<<<<<<< HEAD
-    "scrollTop": -295.671875,
-    "scrollLeft": -243,
-    "zoomLevel": 0.8,
-=======
-    "scrollTop": -53.333331214057154,
-    "scrollLeft": -441.666649116411,
+    "scrollTop": -1081.6666236850997,
+    "scrollLeft": -45.01043944888491,
     "zoomLevel": 0.9,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -103,7 +97,7 @@
           {
             "name": "reach",
             "comment": "",
-            "dataType": "enum('LEO','Suborbital','GTO','HCO','TLI','HEO','Deep Space')",
+            "dataType": "enum(leo, geo, suborbital, etc)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -118,7 +112,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 359.474609375,
+              "widthDataType": 177.59521484375,
               "widthDefault": 60
             },
             "id": "d96c9df4-d7d4-42eb-8e2c-2f726e4bd3ee"
@@ -241,7 +235,7 @@
           {
             "name": "status",
             "comment": "",
-            "dataType": "enum('Operational', 'Retired', 'Development','Testing','Cancelled','Failed')",
+            "dataType": "enum(operational, retired, etc.)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -256,7 +250,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 418.3681640625,
+              "widthDataType": 179.75341796875,
               "widthDefault": 60
             },
             "id": "ca58310a-d129-4892-914d-ccb9aad49f2b"
@@ -264,7 +258,7 @@
           {
             "name": "stages",
             "comment": "",
-            "dataType": "varchar(20)",
+            "dataType": "enum(2, 2+3, etc.)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -279,7 +273,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 68.46630859375,
+              "widthDataType": 107.85986328125,
               "widthDefault": 60
             },
             "id": "639dbd59-31fe-4245-a748-9dd33143fe2c"
@@ -289,11 +283,7 @@
           "active": false,
           "left": 683.1186,
           "top": 881.0004,
-<<<<<<< HEAD
-          "zIndex": 41,
-=======
-          "zIndex": 9,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 60
         },
@@ -486,11 +476,7 @@
           "active": false,
           "left": 895.9388,
           "top": 1465.1668,
-<<<<<<< HEAD
-          "zIndex": 64,
-=======
-          "zIndex": 6,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
+          "zIndex": 12,
           "widthName": 60,
           "widthComment": 60
         },
@@ -498,13 +484,13 @@
         "id": "212cf8a8-a064-4c06-847b-9b59a521d585"
       },
       {
-        "name": "orbitalReach",
+        "name": "orbital reach",
         "comment": "",
         "columns": [
           {
             "name": "reach",
             "comment": "",
-            "dataType": "enum('LEO','Suborbital','GTO','HCO','TLI','HEO','Deep Space')",
+            "dataType": "enum(leo, geo, suborbital, etc)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -519,7 +505,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 359.474609375,
+              "widthDataType": 177.59521484375,
               "widthDefault": 60
             },
             "id": "d08fd13b-4cef-460a-8bcb-c93f2c0351ae"
@@ -550,24 +536,17 @@
         ],
         "ui": {
           "active": false,
-<<<<<<< HEAD
-          "left": 45.4168,
-          "top": 702.9058,
-          "zIndex": 75,
-          "widthName": 74.9853515625,
-=======
           "left": 41.6668,
           "top": 924.1558,
           "zIndex": 3,
           "widthName": 73.5380859375,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
           "widthComment": 60
         },
         "visible": true,
         "id": "e04bbb90-3c67-4cf4-a4f9-87ae92b726e9"
       },
       {
-        "name": "launchLocation",
+        "name": "launch location",
         "comment": "",
         "columns": [
           {
@@ -642,17 +621,10 @@
         ],
         "ui": {
           "active": false,
-<<<<<<< HEAD
-          "left": 1546.1145,
-          "top": 1053.5155,
-          "zIndex": 71,
-          "widthName": 89.4580078125,
-=======
-          "left": 1427.3645,
-          "top": 1012.2655,
-          "zIndex": 5,
+          "left": 1419.0312,
+          "top": 1037.265,
+          "zIndex": 13,
           "widthName": 88.72802734375,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
           "widthComment": 60
         },
         "visible": true,
@@ -734,7 +706,7 @@
           {
             "name": "outcome",
             "comment": "",
-            "dataType": "enum('Scheduled', 'Success', 'Failure','In Progress')",
+            "dataType": "enum(sucess, failure, etc.)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -749,7 +721,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 297.87060546875,
+              "widthDataType": 154.4453125,
               "widthDefault": 60
             },
             "id": "7d1c420f-e026-4cb7-a424-5a4495264dc5"
@@ -803,15 +775,9 @@
         ],
         "ui": {
           "active": false,
-<<<<<<< HEAD
-          "left": 1238.6494,
-          "top": 600.563,
-          "zIndex": 60,
-=======
           "left": 1296.1494,
           "top": 675.563,
           "zIndex": 4,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
           "widthName": 60,
           "widthComment": 60
         },
@@ -942,7 +908,7 @@
           "active": false,
           "left": 1138.4779,
           "top": 291.0429,
-          "zIndex": 11,
+          "zIndex": 10,
           "widthName": 60,
           "widthComment": 60
         },
@@ -956,7 +922,7 @@
           {
             "name": "status",
             "comment": "",
-            "dataType": "enum('Operational', 'Retired', 'Development','Testing','Cancelled','Failed')",
+            "dataType": "enum(operational, retired, etc.)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -971,7 +937,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 418.3681640625,
+              "widthDataType": 179.75341796875,
               "widthDefault": 60
             },
             "id": "a30801d2-c29c-4d14-aed1-216e64ab7384"
@@ -1002,15 +968,9 @@
         ],
         "ui": {
           "active": false,
-<<<<<<< HEAD
-          "left": 103.2963,
-          "top": 321.1977,
-          "zIndex": 19,
-=======
           "left": 295.7963,
           "top": 194.9477,
           "zIndex": 2,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
           "widthName": 74.25537109375,
           "widthComment": 60
         },
@@ -1070,15 +1030,9 @@
         ],
         "ui": {
           "active": false,
-<<<<<<< HEAD
-          "left": 1621.6933,
-          "top": 432.1946,
-          "zIndex": 61,
-=======
           "left": 1599.1933,
           "top": 459.6946,
-          "zIndex": 7,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
+          "zIndex": 6,
           "widthName": 93.04443359375,
           "widthComment": 60
         },
@@ -1115,7 +1069,7 @@
           {
             "name": "customerName",
             "comment": "",
-            "dataType": "varchar(255)",
+            "dataType": "",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1130,7 +1084,7 @@
               "pfk": false,
               "widthName": 90.13720703125,
               "widthComment": 60,
-              "widthDataType": 75.6962890625,
+              "widthDataType": 60,
               "widthDefault": 60
             },
             "id": "8e2f13d8-3ab3-45e7-8f86-f02f68d6f1d2"
@@ -1209,11 +1163,7 @@
           "active": false,
           "left": 876.0485,
           "top": 56.2124,
-<<<<<<< HEAD
-          "zIndex": 66,
-=======
-          "zIndex": 10,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
+          "zIndex": 9,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1226,7 +1176,7 @@
         "columns": [
           {
             "name": "type",
-            "comment": "",
+            "comment": "solid, monopropellant, ",
             "dataType": "varchar(50)",
             "default": "",
             "option": {
@@ -1241,7 +1191,7 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 120,
               "widthDataType": 68.46630859375,
               "widthDefault": 60
             },
@@ -1250,7 +1200,7 @@
           {
             "name": "power",
             "comment": "",
-            "dataType": "varchar(50)",
+            "dataType": "enum(physical, chemical, etc.)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -1265,7 +1215,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 68.46630859375,
+              "widthDataType": 176.83984375,
               "widthDefault": 60
             },
             "id": "aea6bfaf-4c9f-4817-a130-fa97001d5fb4"
@@ -1275,13 +1225,8 @@
           "active": false,
           "left": 1179.5498,
           "top": 1728.3332,
-<<<<<<< HEAD
-          "zIndex": 50,
-          "widthName": 69.22802734375,w
-=======
-          "zIndex": 8,
+          "zIndex": 7,
           "widthName": 69.2216796875,
->>>>>>> 3c23b9cfb2927b11f6c2d206939b9333231e7557
           "widthComment": 60
         },
         "visible": true,
@@ -1365,7 +1310,7 @@
           "active": false,
           "left": 1285.2636,
           "top": 1279.9997,
-          "zIndex": 12,
+          "zIndex": 11,
           "widthName": 77.8798828125,
           "widthComment": 60
         },
@@ -1389,7 +1334,7 @@
           "columnIds": [
             "2899d3c9-f9c8-4824-b345-25a3ec5d51f9"
           ],
-          "x": 1400.5648890625,
+          "x": 1161.95014296875,
           "y": 949.5004,
           "direction": "right"
         },
@@ -1398,9 +1343,9 @@
           "columnIds": [
             "ae8ba3eb-c95d-4361-acc9-54ceccf23120"
           ],
-          "x": 1389.878159765625,
-          "y": 792.563,
-          "direction": "bottom"
+          "x": 1296.1494,
+          "y": 771.563,
+          "direction": "left"
         },
         "constraintName": "fk_rockets_to_missions",
         "visible": true,
@@ -1415,17 +1360,17 @@
           "columnIds": [
             "ee18dad1-2474-4b7f-9451-4b9a128549f2"
           ],
-          "x": 1546.1145,
-          "y": 1118.7655,
-          "direction": "left"
+          "x": 1611.1220203125,
+          "y": 1037.265,
+          "direction": "top"
         },
         "end": {
           "tableId": "71e74ebb-71f3-4fc4-9c52-dfa17001d028",
           "columnIds": [
             "e8646839-3230-4b23-8403-432b5851d7eb"
           ],
-          "x": 1692.335679296875,
-          "y": 792.563,
+          "x": 1526.894273046875,
+          "y": 867.563,
           "direction": "bottom"
         },
         "constraintName": "fk_lauch location_to_missions",
@@ -1467,8 +1412,8 @@
           "columnIds": [
             "d08fd13b-4cef-460a-8bcb-c93f2c0351ae"
           ],
-          "x": 691.891409375,
-          "y": 757.9058,
+          "x": 506.26201484375,
+          "y": 979.1558,
           "direction": "right"
         },
         "end": {
@@ -1493,8 +1438,8 @@
           "columnIds": [
             "a30801d2-c29c-4d14-aed1-216e64ab7384"
           ],
-          "x": 820.044346875,
-          "y": 376.1977,
+          "x": 773.92960078125,
+          "y": 249.9477,
           "direction": "right"
         },
         "end": {
@@ -1502,7 +1447,7 @@
           "columnIds": [
             "ca58310a-d129-4892-914d-ccb9aad49f2b"
           ],
-          "x": 1041.84174453125,
+          "x": 922.534371484375,
           "y": 881.0004,
           "direction": "top"
         },
@@ -1519,8 +1464,8 @@
           "columnIds": [
             "155d6d17-a3d6-4ac1-a550-1cc02aebaf85"
           ],
-          "x": 1541.10691953125,
-          "y": 600.563,
+          "x": 1526.894273046875,
+          "y": 675.563,
           "direction": "top"
         },
         "end": {
@@ -1528,8 +1473,8 @@
           "columnIds": [
             "3fa97dc9-060c-4ea1-994e-c03aab51b44e"
           ],
-          "x": 1621.6933,
-          "y": 514.6946,
+          "x": 1599.1933,
+          "y": 542.1946,
           "direction": "left"
         },
         "constraintName": "fk_missions_to_missionpayloads",
@@ -1554,8 +1499,8 @@
           "columnIds": [
             "03c410ff-8c82-446e-a2b4-21c24f1401b6"
           ],
-          "x": 1621.6933,
-          "y": 459.6946,
+          "x": 1599.1933,
+          "y": 487.1946,
           "direction": "left"
         },
         "constraintName": "fk_payload_to_missionpayloads",
@@ -1649,7 +1594,7 @@
           "columnIds": [
             "2899d3c9-f9c8-4824-b345-25a3ec5d51f9"
           ],
-          "x": 1400.5648890625,
+          "x": 1161.95014296875,
           "y": 1086.5004,
           "direction": "right"
         },
@@ -1658,9 +1603,9 @@
           "columnIds": [
             "4ec58e01-0671-4f6a-bae7-44db750deaa6"
           ],
-          "x": 1462.996754296875,
-          "y": 1279.9997,
-          "direction": "top"
+          "x": 1285.2636,
+          "y": 1345.2497,
+          "direction": "left"
         },
         "constraintName": "fk_rocket_to_rocketengine",
         "visible": true,
