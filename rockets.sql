@@ -1,7 +1,8 @@
+-- create and use the rockets schema
 create database rockets;
-
 use rockets;
 
+-- company will contain companies
 create table company
 (
   companyId   varchar(36)  not null COMMENT 'uuid.v4',
