@@ -1,8 +1,13 @@
+-- this SQL script will:
+-- create a rockets database,
+-- implement the tables within the database,
+-- implement foreign keys between tables.
+
 -- create and use the rockets schema
 create database rockets;
 use rockets;
 
--- company will contain companies
+-- create company table to store companies and their details
 create table company
 (
   companyId   varchar(36)  not null COMMENT 'uuid.v4',
@@ -10,6 +15,7 @@ create table company
   primary key (companyId)
 );
 
+-- create the customer table to store customers who will commision payloads
 create table customer
 (
   customerId   varchar(36)  not null COMMENT 'uuid.v4',
@@ -20,6 +26,7 @@ create table customer
   primary key (customerId)
 );
 
+-- create the engine table to store engines and their details
 create table engine
 (
   engineId   varchar(36)  not null COMMENT 'uuid.v4',
@@ -30,6 +37,7 @@ create table engine
   primary key (engineId)
 );
 
+-- create the engine type table that stores the various engine types
 create table engineType
 (
   type  varchar(50) not null,
@@ -37,6 +45,7 @@ create table engineType
   primary key (type)
 );
 
+-- create the 
 create table launchLocation
 (
   locationId   varchar(36)  not null COMMENT 'uuid.v4',
@@ -108,10 +117,15 @@ create table rocketStatus
   primary key (status)
 );
 
+-- creates a foreign key constraint for a rocket in a mission
+-- when the rocket id is updated or deleted, the rocket id in the mission
+-- table will be updated or the record deleted.
 alter table mission
   add constraint FK_rocket_TO_mission
     foreign key (rocketId)
-    references rocket (rocketId);
+    references rocket (rocketId)
+    on update cascade
+    on delete cascade;
 
 alter table mission
   add constraint FK_launchLocation_TO_mission
