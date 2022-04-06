@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -310.84375,
-    "scrollLeft": -849.171875,
+    "scrollTop": 0,
+    "scrollLeft": 0,
     "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
@@ -103,7 +103,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -241,7 +241,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -283,7 +283,7 @@
           "active": false,
           "left": 683.1186,
           "top": 881.0004,
-          "zIndex": 7,
+          "zIndex": 12,
           "widthName": 60,
           "widthComment": 60
         },
@@ -411,7 +411,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -476,7 +476,7 @@
           "active": false,
           "left": 895.9388,
           "top": 1465.1668,
-          "zIndex": 11,
+          "zIndex": 10,
           "widthName": 60,
           "widthComment": 60
         },
@@ -623,7 +623,7 @@
           "active": false,
           "left": 1419.0312,
           "top": 1037.265,
-          "zIndex": 12,
+          "zIndex": 9,
           "widthName": 88.72802734375,
           "widthComment": 60
         },
@@ -666,7 +666,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -689,7 +689,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -777,7 +777,7 @@
           "active": false,
           "left": 1296.1494,
           "top": 675.563,
-          "zIndex": 4,
+          "zIndex": 11,
           "widthName": 60,
           "widthComment": 60
         },
@@ -908,7 +908,7 @@
           "active": false,
           "left": 1138.4779,
           "top": 291.0429,
-          "zIndex": 9,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1032,7 +1032,7 @@
           "active": false,
           "left": 1599.1933,
           "top": 459.6946,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 93.04443359375,
           "widthComment": 60
         },
@@ -1163,7 +1163,7 @@
           "active": false,
           "left": 876.0485,
           "top": 56.2124,
-          "zIndex": 8,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1225,7 +1225,7 @@
           "active": false,
           "left": 1179.5498,
           "top": 1728.3332,
-          "zIndex": 6,
+          "zIndex": 5,
           "widthName": 69.22802734375,
           "widthComment": 60
         },
@@ -1310,7 +1310,7 @@
           "active": false,
           "left": 1285.2636,
           "top": 1279.9997,
-          "zIndex": 10,
+          "zIndex": 8,
           "widthName": 77.8798828125,
           "widthComment": 60
         },
@@ -1328,7 +1328,7 @@
       {
         "identification": false,
         "relationshipType": "ZeroN",
-        "startRelationshipType": "Dash",
+        "startRelationshipType": "Ring",
         "start": {
           "tableId": "31fc43ac-35c1-45e3-8ff3-b8a4a341acbb",
           "columnIds": [
@@ -1354,7 +1354,7 @@
       {
         "identification": false,
         "relationshipType": "ZeroN",
-        "startRelationshipType": "Dash",
+        "startRelationshipType": "Ring",
         "start": {
           "tableId": "8daf3c99-7b24-4402-a604-9325077e1f41",
           "columnIds": [
@@ -1406,7 +1406,7 @@
       {
         "identification": false,
         "relationshipType": "ZeroN",
-        "startRelationshipType": "Dash",
+        "startRelationshipType": "Ring",
         "start": {
           "tableId": "e04bbb90-3c67-4cf4-a4f9-87ae92b726e9",
           "columnIds": [
@@ -1432,7 +1432,7 @@
       {
         "identification": false,
         "relationshipType": "ZeroN",
-        "startRelationshipType": "Dash",
+        "startRelationshipType": "Ring",
         "start": {
           "tableId": "2e3137fa-aa32-4dc2-9aa5-3821730326b7",
           "columnIds": [
@@ -1562,7 +1562,7 @@
       {
         "identification": false,
         "relationshipType": "ZeroN",
-        "startRelationshipType": "Dash",
+        "startRelationshipType": "Ring",
         "start": {
           "tableId": "cde63835-38ff-4bca-9d70-a58dc9b0461e",
           "columnIds": [
