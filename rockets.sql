@@ -67,8 +67,7 @@ Creates rocketEngine which will store records of the many to many relationship b
 create table rocketEngine
 (
   rocketId  varchar(36) not null COMMENT 'uuid.v4',
-  engineId  varchar(36) not null COMMENT 'uuid.v4',
-  dateBuilt date        not null
+  engineId  varchar(36) not null COMMENT 'uuid.v4'
 );
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -109,6 +108,7 @@ create table mission
   missionId   varchar(36)                                           not null COMMENT 'uuid.v4',
   rocketId    varchar(36)                                           null,
   locationId  varchar(36)                                           null,
+  missionName varchar(255)                                          not null,
   outcome     enum('Scheduled', 'Success', 'Failure','In Progress') not null,
   dateLaunch  date                                                  not null,
   dateOutcome date                                                  null    ,
@@ -151,7 +151,7 @@ create table payload
   customerId       varchar(36)  not null COMMENT 'uuid.v4',
   payload          varchar(255) not null,
   weight           int          not null COMMENT 'in kg',
-  dateCommissioned date         not null,
+  dateCommissioned date         null,
   primary key (payloadId)
 );
 
@@ -168,47 +168,14 @@ create table rocket
   companyId  varchar(36)                                                                  not null,
   reach      enum('LEO','Suborbital','GTO','HCO','TLI','HEO','Deep Space')                null,
   rocketName varchar(255)                                                                 not null,
-  height     decimal(6,2)                                                                 not null COMMENT 'in meters',
-  diameter   decimal(6.2)                                                                 not null COMMENT 'in meters',
-  mass       decimal(6,4)                                                                 not null COMMENT 'in tonnes',
-  dateBuilt  date                                                                         not null,
+  height     decimal(10, 2)                                                                 not null COMMENT 'in meters',
+  diameter   decimal(10, 2)                                                                 not null COMMENT 'in meters',
+  mass       decimal(10, 2)                                                                 not null COMMENT 'in tonnes',
+  dateBuilt  date                                                                         null,
   status     enum('Operational', 'Retired', 'Development','Testing','Cancelled','Failed') null,
   stages     varchar(20)                                                                  not null,
   primary key (rocketId)
 );
-
-
-
----------------------------------------------------------------------------------------------------------------------
-
-/* 
-Creates the rocketStatus table to store the status of rockets.
-A rocket's status is a single word descriptor of the rocket's operational status or lack thereof
-*/
-create table rocketStatus
-(
-  status      enum('Operational', 'Retired', 'Development','Testing','Cancelled','Failed') not null,
-  lastUpdated date                                                                         not null,
-  primary key (status)
-);
-
----------------------------------------------------------------------------------------------------------------------
-
-
-
-/* 
-Creates a zero or many relationship of rocketStatus to rocket  
-Rockets have an operational status
-
-On Update: Cascade. If the status is updated within the rocketStatus table then it will also be updated within the rocket table
-On Delete: Set NULL.  If the status is deleted within the rocketStatus table then it will be Set as NULL within the rocket table
- */
-alter table rocket
-  add constraint FK_rocketStatus_TO_rocket
-    foreign key (status)
-    references rocketStatus (status)
-    on update cascade
-    on delete set null;
 
 ---------------------------------------------------------------------------------------------------------------------
 

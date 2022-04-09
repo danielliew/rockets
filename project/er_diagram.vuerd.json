@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
-    "zoomLevel": 0.8,
+    "scrollTop": -84,
+    "scrollLeft": -489.171875,
+    "zoomLevel": 1,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -218,7 +218,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -246,7 +246,7 @@
             "ui": {
               "active": false,
               "pk": false,
-              "fk": true,
+              "fk": false,
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
@@ -283,7 +283,7 @@
           "active": false,
           "left": 683.1186,
           "top": 881.0004,
-          "zIndex": 12,
+          "zIndex": 11,
           "widthName": 60,
           "widthComment": 60
         },
@@ -476,7 +476,7 @@
           "active": false,
           "left": 895.9388,
           "top": 1465.1668,
-          "zIndex": 10,
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 60
         },
@@ -538,7 +538,7 @@
           "active": false,
           "left": 41.6668,
           "top": 924.1558,
-          "zIndex": 3,
+          "zIndex": 2,
           "widthName": 73.5380859375,
           "widthComment": 60
         },
@@ -623,7 +623,7 @@
           "active": false,
           "left": 1419.0312,
           "top": 1037.265,
-          "zIndex": 9,
+          "zIndex": 7,
           "widthName": 88.72802734375,
           "widthComment": 60
         },
@@ -704,6 +704,29 @@
             "id": "e8646839-3230-4b23-8403-432b5851d7eb"
           },
           {
+            "name": "missionName",
+            "comment": "",
+            "dataType": "varchar(255)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 80.74267578125,
+              "widthComment": 60,
+              "widthDataType": 75.6962890625,
+              "widthDefault": 60
+            },
+            "id": "3a602f84-6512-4384-b0b1-f42be4deb994"
+          },
+          {
             "name": "outcome",
             "comment": "",
             "dataType": "enum(sucess, failure, etc.)",
@@ -777,7 +800,7 @@
           "active": false,
           "left": 1296.1494,
           "top": 675.563,
-          "zIndex": 11,
+          "zIndex": 10,
           "widthName": 60,
           "widthComment": 60
         },
@@ -889,7 +912,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -905,77 +928,15 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 1138.4779,
           "top": 291.0429,
-          "zIndex": 7,
+          "zIndex": 13,
           "widthName": 60,
           "widthComment": 60
         },
         "visible": true,
         "id": "0bfeacd1-83a4-418d-9cae-3494351c5b23"
-      },
-      {
-        "name": "rocketStatus",
-        "comment": "",
-        "columns": [
-          {
-            "name": "status",
-            "comment": "",
-            "dataType": "enum(operational, retired, etc.)",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": true,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": true,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 179.75341796875,
-              "widthDefault": 60
-            },
-            "id": "a30801d2-c29c-4d14-aed1-216e64ab7384"
-          },
-          {
-            "name": "lastUpdated",
-            "comment": "",
-            "dataType": "date",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 71.3798828125,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "c830f282-080e-4f60-b365-2939b550ae20"
-          }
-        ],
-        "ui": {
-          "active": false,
-          "left": 295.7963,
-          "top": 194.9477,
-          "zIndex": 2,
-          "widthName": 74.25537109375,
-          "widthComment": 60
-        },
-        "visible": true,
-        "id": "2e3137fa-aa32-4dc2-9aa5-3821730326b7"
       },
       {
         "name": "missionPayload",
@@ -1032,7 +993,7 @@
           "active": false,
           "left": 1599.1933,
           "top": 459.6946,
-          "zIndex": 4,
+          "zIndex": 3,
           "widthName": 93.04443359375,
           "widthComment": 60
         },
@@ -1163,7 +1124,7 @@
           "active": false,
           "left": 876.0485,
           "top": 56.2124,
-          "zIndex": 6,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1225,7 +1186,7 @@
           "active": false,
           "left": 1179.5498,
           "top": 1728.3332,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 69.22802734375,
           "widthComment": 60
         },
@@ -1281,36 +1242,13 @@
               "widthDefault": 60
             },
             "id": "2745c8bb-a8b8-47b3-abfa-647b09d00215"
-          },
-          {
-            "name": "dateBuilt",
-            "comment": "",
-            "dataType": "DATE",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "92311c8d-d4b2-45e9-ba04-cd51a665f166"
           }
         ],
         "ui": {
           "active": false,
           "left": 1285.2636,
           "top": 1279.9997,
-          "zIndex": 8,
+          "zIndex": 9,
           "widthName": 77.8798828125,
           "widthComment": 60
         },
@@ -1344,7 +1282,7 @@
             "ae8ba3eb-c95d-4361-acc9-54ceccf23120"
           ],
           "x": 1296.1494,
-          "y": 771.563,
+          "y": 781.813,
           "direction": "left"
         },
         "constraintName": "fk_rockets_to_missions",
@@ -1369,8 +1307,8 @@
           "columnIds": [
             "e8646839-3230-4b23-8403-432b5851d7eb"
           ],
-          "x": 1526.894273046875,
-          "y": 867.563,
+          "x": 1527.243394140625,
+          "y": 888.063,
           "direction": "bottom"
         },
         "constraintName": "fk_lauch location_to_missions",
@@ -1432,39 +1370,13 @@
       {
         "identification": false,
         "relationshipType": "ZeroN",
-        "startRelationshipType": "Ring",
-        "start": {
-          "tableId": "2e3137fa-aa32-4dc2-9aa5-3821730326b7",
-          "columnIds": [
-            "a30801d2-c29c-4d14-aed1-216e64ab7384"
-          ],
-          "x": 773.92960078125,
-          "y": 249.9477,
-          "direction": "right"
-        },
-        "end": {
-          "tableId": "31fc43ac-35c1-45e3-8ff3-b8a4a341acbb",
-          "columnIds": [
-            "ca58310a-d129-4892-914d-ccb9aad49f2b"
-          ],
-          "x": 922.534371484375,
-          "y": 881.0004,
-          "direction": "top"
-        },
-        "constraintName": "fk_launch status_to_rockets",
-        "visible": true,
-        "id": "5bc66012-0d1c-4b49-abb4-140ba6a2fcb6"
-      },
-      {
-        "identification": false,
-        "relationshipType": "ZeroN",
         "startRelationshipType": "Dash",
         "start": {
           "tableId": "71e74ebb-71f3-4fc4-9c52-dfa17001d028",
           "columnIds": [
             "155d6d17-a3d6-4ac1-a550-1cc02aebaf85"
           ],
-          "x": 1526.894273046875,
+          "x": 1527.243394140625,
           "y": 675.563,
           "direction": "top"
         },
@@ -1604,7 +1516,7 @@
             "4ec58e01-0671-4f6a-bae7-44db750deaa6"
           ],
           "x": 1285.2636,
-          "y": 1345.2497,
+          "y": 1334.9997,
           "direction": "left"
         },
         "constraintName": "fk_rocket_to_rocketengine",
@@ -1630,7 +1542,7 @@
             "2745c8bb-a8b8-47b3-abfa-647b09d00215"
           ],
           "x": 1462.996754296875,
-          "y": 1410.4997,
+          "y": 1389.9997,
           "direction": "bottom"
         },
         "constraintName": "fk_engine_to_rocketengine",
