@@ -74,7 +74,14 @@ insert into orbitalReach
     (reach, height) 
 values 
     ('LEO', 1600),
-    ('Suborbital', 100);
+    ('Suborbital', 100),
+    ('GTO', 37000),
+    ('TLI', 347),
+    ('Deep Space', 2000000),
+    ('HEO',),
+    ('GEO',),
+    ('TMI',);
+
 
 -- rocket
 insert into rocket 
