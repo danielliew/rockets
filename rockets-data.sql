@@ -78,13 +78,13 @@ values
     ('GTO', 37000),
     ('TLI', 347),
     ('Deep Space', 2000000),
-    ('HEO',37000),
-    ('GEO',42000),
-    ('TMI',33000),
-    ('HCO',36000),
-    ('MEO',34000),
-    ('SSO',800),
-    ('Polar',1000);
+    ('HEO', 37000),
+    ('GEO', 42000),
+    ('TMI', 33000),
+    ('HCO', 36000),
+    ('MEO', 34000),
+    ('SSO', 800),
+    ('Polar', 1000);
 
 
 -- rocket
@@ -280,7 +280,7 @@ values
         (select customer.customerId from customer where customer.customerName = 'Axiom Space'),
         "Crew Dragon Endeavour",
         4201,
-        null,
+        null
     );
 
 -- missionPayload
