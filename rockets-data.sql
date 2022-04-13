@@ -67,6 +67,31 @@ values
         'Bipropellent',
         'Aeon 1',
         100
+
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Northrop Grumman Innovation Systems'),
+        'Bipropellent',
+        'RD-181', /*Antares*/
+        440
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Rocket Lab'),
+        'Bipropellant',
+        'Rutherford', /*Electron*/
+        224
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'United Launch Alliance'),
+        'Liquid Fuel',
+        'RD-180', /*Atlas V*/
+        1688
+        
     );
 
 -- orbitalReach
