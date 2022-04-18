@@ -17,4 +17,8 @@ SELECT      rocket.companyName, rocket.rocketName, orbitalReach.height
 JOIN        orbitalReach    ON      rocket.reach = orbitalReach.reach
 ORDER BY    orbitalReach.height
 
---
+-- Query to pull all missions that reached LEO during 2020 (LIKE, JOIN, GROUPBY)
+
+-- Find average height of rocket select most recent mission and compare (function, join, orderby)
+
+-- 
