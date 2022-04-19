@@ -18,7 +18,9 @@ values
     (uuid(), 'SpaceX'),
     (uuid(), 'United Launch Alliance'),
     (uuid(), 'Rocket Lab'),
-    (uuid(), 'Relativity Space');
+    (uuid(), 'Relativity Space'),
+    (uuid(), 'PLD Space'),
+    (uuid(), 'Vector Launch');
 
 -- engineType
 insert into engineType 
@@ -91,6 +93,37 @@ values
         'Liquid Fuel',
         'RD-180', /*Atlas V*/
         1688
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Lockheed Martin'),
+        'HTPB',
+        'ORBUS 21D', /*Athena*/
+        194
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'PLD Space'),
+        'LOX',
+        'TEPREL-C', /*Miura 5*/
+        45
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'PLD Space'),
+        'LOX',
+        'TEPREL-C', /*Miura 5*/
+        45
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Vector Launch'),
+        'LOX',
+        'LP-1', /*Vector-R*/
+        85
         
     );
 
