@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -84,
-    "scrollLeft": -489.171875,
+    "scrollTop": -12,
+    "scrollLeft": -159,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -97,7 +97,7 @@
           {
             "name": "reach",
             "comment": "",
-            "dataType": "enum(leo, geo, suborbital, etc)",
+            "dataType": "varchar(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -112,7 +112,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 177.59521484375,
+              "widthDataType": 68.46630859375,
               "widthDefault": 60
             },
             "id": "d96c9df4-d7d4-42eb-8e2c-2f726e4bd3ee"
@@ -143,7 +143,7 @@
           {
             "name": "height",
             "comment": "in meters",
-            "dataType": "decimal(6,2)",
+            "dataType": "decimal(10,2)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -158,7 +158,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 73.525390625,
+              "widthDataType": 80.75537109375,
               "widthDefault": 60
             },
             "id": "21d09ee9-5854-413e-9384-685438869078"
@@ -166,7 +166,7 @@
           {
             "name": "diameter",
             "comment": "in meters",
-            "dataType": "decimal(6.2)",
+            "dataType": "decimal(10,2)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -181,7 +181,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 73.525390625,
+              "widthDataType": 80.75537109375,
               "widthDefault": 60
             },
             "id": "a899806e-0815-4bb6-8e94-ceca9d2709f1"
@@ -189,7 +189,7 @@
           {
             "name": "mass",
             "comment": "in tonnes",
-            "dataType": "decimal(6,4)",
+            "dataType": "decimal(10,2)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -204,7 +204,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 73.525390625,
+              "widthDataType": 80.75537109375,
               "widthDefault": 60
             },
             "id": "fa369a82-5ec1-4001-b17a-c741bf3c5cfd"
@@ -281,7 +281,7 @@
         ],
         "ui": {
           "active": false,
-          "left": 683.1186,
+          "left": 684.1186,
           "top": 881.0004,
           "zIndex": 11,
           "widthName": 60,
@@ -476,7 +476,7 @@
           "active": false,
           "left": 895.9388,
           "top": 1465.1668,
-          "zIndex": 8,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -484,13 +484,13 @@
         "id": "212cf8a8-a064-4c06-847b-9b59a521d585"
       },
       {
-        "name": "orbital reach",
+        "name": "orbitalReach",
         "comment": "",
         "columns": [
           {
             "name": "reach",
             "comment": "",
-            "dataType": "enum(leo, geo, suborbital, etc)",
+            "dataType": "varchar(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -505,7 +505,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 177.59521484375,
+              "widthDataType": 68.46630859375,
               "widthDefault": 60
             },
             "id": "d08fd13b-4cef-460a-8bcb-c93f2c0351ae"
@@ -513,7 +513,7 @@
           {
             "name": "height",
             "comment": "in meters",
-            "dataType": "int",
+            "dataType": "BIGINT",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -538,15 +538,15 @@
           "active": false,
           "left": 41.6668,
           "top": 924.1558,
-          "zIndex": 2,
-          "widthName": 73.5380859375,
+          "zIndex": 16,
+          "widthName": 74.9853515625,
           "widthComment": 60
         },
         "visible": true,
         "id": "e04bbb90-3c67-4cf4-a4f9-87ae92b726e9"
       },
       {
-        "name": "launch location",
+        "name": "launchLocation",
         "comment": "",
         "columns": [
           {
@@ -623,8 +623,8 @@
           "active": false,
           "left": 1419.0312,
           "top": 1037.265,
-          "zIndex": 7,
-          "widthName": 88.72802734375,
+          "zIndex": 19,
+          "widthName": 89.4580078125,
           "widthComment": 60
         },
         "visible": true,
@@ -800,7 +800,7 @@
           "active": false,
           "left": 1296.1494,
           "top": 675.563,
-          "zIndex": 10,
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 60
         },
@@ -928,10 +928,10 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 1138.4779,
           "top": 291.0429,
-          "zIndex": 13,
+          "zIndex": 9,
           "widthName": 60,
           "widthComment": 60
         },
@@ -993,7 +993,7 @@
           "active": false,
           "left": 1599.1933,
           "top": 459.6946,
-          "zIndex": 3,
+          "zIndex": 2,
           "widthName": 93.04443359375,
           "widthComment": 60
         },
@@ -1124,7 +1124,7 @@
           "active": false,
           "left": 876.0485,
           "top": 56.2124,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1186,7 +1186,7 @@
           "active": false,
           "left": 1179.5498,
           "top": 1728.3332,
-          "zIndex": 4,
+          "zIndex": 3,
           "widthName": 69.22802734375,
           "widthComment": 60
         },
@@ -1248,7 +1248,7 @@
           "active": false,
           "left": 1285.2636,
           "top": 1279.9997,
-          "zIndex": 9,
+          "zIndex": 7,
           "widthName": 77.8798828125,
           "widthComment": 60
         },
@@ -1272,7 +1272,7 @@
           "columnIds": [
             "2899d3c9-f9c8-4824-b345-25a3ec5d51f9"
           ],
-          "x": 1161.95014296875,
+          "x": 1162.95014296875,
           "y": 949.5004,
           "direction": "right"
         },
@@ -1333,7 +1333,7 @@
           "columnIds": [
             "8be23db3-20d2-4955-9aea-c02f0e2b14e6"
           ],
-          "x": 683.1186,
+          "x": 684.1186,
           "y": 1086.5004,
           "direction": "left"
         },
@@ -1350,7 +1350,7 @@
           "columnIds": [
             "d08fd13b-4cef-460a-8bcb-c93f2c0351ae"
           ],
-          "x": 506.26201484375,
+          "x": 397.13310859375,
           "y": 979.1558,
           "direction": "right"
         },
@@ -1359,7 +1359,7 @@
           "columnIds": [
             "d96c9df4-d7d4-42eb-8e2c-2f726e4bd3ee"
           ],
-          "x": 683.1186,
+          "x": 684.1186,
           "y": 949.5004,
           "direction": "left"
         },
@@ -1506,7 +1506,7 @@
           "columnIds": [
             "2899d3c9-f9c8-4824-b345-25a3ec5d51f9"
           ],
-          "x": 1161.95014296875,
+          "x": 1162.95014296875,
           "y": 1086.5004,
           "direction": "right"
         },

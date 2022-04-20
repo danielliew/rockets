@@ -133,8 +133,8 @@ Creates table orbitalReach which is a property of each rocket's specifications
 */
 create table orbitalReach
 (
-  reach  enum('LEO','Suborbital','GTO','HCO','TLI','HEO','Deep Space') not null,
-  height int                                                           not null COMMENT 'in meters',
+  reach  varchar(50) not null,
+  height bigint                                                           not null COMMENT 'in meters',
   primary key (reach)
 );
 
@@ -166,11 +166,11 @@ create table rocket
 (
   rocketId   varchar(36)                                                                  not null COMMENT 'uuid.v4',
   companyId  varchar(36)                                                                  not null,
-  reach      enum('LEO','Suborbital','GTO','HCO','TLI','HEO','Deep Space')                null,
+  reach      varchar(50)                                                                  null,
   rocketName varchar(255)                                                                 not null,
-  height     decimal(10, 2)                                                                 not null COMMENT 'in meters',
-  diameter   decimal(10, 2)                                                                 not null COMMENT 'in meters',
-  mass       decimal(10, 2)                                                                 not null COMMENT 'in tonnes',
+  height     decimal(10, 2)                                                               not null COMMENT 'in meters',
+  diameter   decimal(10, 2)                                                               not null COMMENT 'in meters',
+  mass       decimal(10, 2)                                                               not null COMMENT 'in tonnes',
   dateBuilt  date                                                                         null,
   status     enum('Operational', 'Retired', 'Development','Testing','Cancelled','Failed') null,
   stages     varchar(20)                                                                  not null,

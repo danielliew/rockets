@@ -2,23 +2,27 @@
 This file answers 10 business questions related to the rockets database
 */
 
---  which engine type is most common in missions? (JOIN, JOIN, GROUPBY)
+--  Which engine type is most common in missions?
 
-FROM        mission
-SELECT      engine.type
-JOIN        rocketEngine    ON      mission.rocketId = rocketEngine.rocketId
-JOIN        engine          ON      rocketEngine.rocketId = engine.rocketId
-GROUP BY    engine.type
+select count(*) as 'count', engine.type  from mission      
+    left join rocketEngine on rocketEngine.rocketId = mission.rocketId     
+    left join engine on engine.engineId = rocketEngine.engineId     
+    group by engine.type
+    order by count desc
+    limit 1
 
---  which company has the rock with the greatest range/height? (JOIN, ORDERBY)
+--  Which company has the rocket with the greatest range/height?
 
-FROM        rocket
-SELECT      rocket.companyName, rocket.rocketName, orbitalReach.height
-JOIN        orbitalReach    ON      rocket.reach = orbitalReach.reach
-ORDER BY    orbitalReach.height
+select max(height) as 'maxheight', company.companyName from rocket
+	left join company on company.companyId = rocket.companyId
+    group by rocket.companyId
+    order by maxheight desc
+    limit 1
 
--- Query to pull all missions that reached LEO during 2020 (LIKE, JOIN, GROUPBY)
+-- List all successful missions that used rockets that have a reach greater than LEO
 
--- Find average height of rocket select most recent mission and compare (function, join, orderby)
-
--- 
+select * from mission
+	left join rocket r on r.rocketId = mission.rocketId
+    left join orbitalReach o on o.reach = r.reach
+    where o.height > (select height from orbitalReach where reach = 'LEO') and mission.outcome = 'Success'
+    

@@ -36,7 +36,9 @@ values
     ('Ion Propusion', 'Electrical'),
     ('Nuclear Thermal', 'Thermal'),
     ('Cryogenic', 'Liquid Hydrogen/Oxygen'),
-    ('Liquid Propellant', 'Chemical');
+    ('Liquid Propellant', 'Chemical'),
+    ('HTPB', 'Chemical'),
+    ('LOX', 'Chemical');
     
 -- engine
 insert into engine 
@@ -66,7 +68,7 @@ values
     (
         uuid(),
         (select company.companyId from company where company.companyName = 'Relativity Space'),
-        'Bipropellent',
+        'Bipropellant',
         'Aeon 1',
         100
 
@@ -74,7 +76,7 @@ values
     (
         uuid(),
         (select company.companyId from company where company.companyName = 'Northrop Grumman Innovation Systems'),
-        'Bipropellent',
+        'Bipropellant',
         'RD-181', /*Antares*/
         440
         
@@ -90,7 +92,7 @@ values
     (
         uuid(),
         (select company.companyId from company where company.companyName = 'United Launch Alliance'),
-        'Liquid Fuel',
+        'Liquid Propellant',
         'RD-180', /*Atlas V*/
         1688
         
@@ -134,7 +136,8 @@ values
     ('HCO', 36000),
     ('MEO', 34000),
     ('SSO', 800),
-    ('Polar', 1000);
+    ('Polar', 1000),
+    ('Mars Transfer Orbit', 54600000);
 
 
 -- rocket
@@ -347,7 +350,7 @@ insert into launchLocation
 values 
     (uuid(), 'Cape Canaveral Space Force Station', 'Cape Canaveral, FL 32920'),
     (uuid(), 'Launch Site One', 'Van Hron, TX 79855'),
-    (uuid(), 'John F. Kennedy Space Center', 'Merritt Island, FL 32899')
+    (uuid(), 'John F. Kennedy Space Center', 'Merritt Island, FL 32899');
 
 -- mission
 insert into mission 
@@ -395,9 +398,9 @@ insert into customer
     (customerId, customerName, address, contactName, contactEmail) 
 values 
     (uuid(), 'SpaceX', '1 Rocket Road, Hawthorne, CA', 'Elon Musk', 'ceo@spacex.com'),
-    (uuid(), 'Blue Origin,' '21601 76th Ave S, Kent, WA 98032', 'Jeff Bezos','ceo@blueorigin.com'),
-    (uuid(), 'Virgin Orbit', '4022 E Conant St, Long Beach, CA 90808','Dan Hart','ceo@virginorbit.com')
-    (uuid(), 'Axiom Space', 'Houston, TX');
+    (uuid(), 'Blue Origin', '21601 76th Ave S, Kent, WA 98032', 'Jeff Bezos','ceo@blueorigin.com'),
+    (uuid(), 'Virgin Orbit', '4022 E Conant St, Long Beach, CA 90808','Dan Hart','ceo@virginorbit.com'),
+    (uuid(), 'Axiom Space', 'Houston, TX', null, null);
 
 -- payload
 insert into payload 
