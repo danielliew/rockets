@@ -319,6 +319,26 @@ values
     (
         (select rocket.rocketId from rocket where rocket.rocketName = 'Terran 1'),
         (select engine.engineId from engine where engine.engineName = 'Aeon 1')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Antares'),
+        (select engine.engineId from engine where engine.engineName = 'RD-181')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Electron'),
+        (select engine.engineId from engine where engine.engineName = 'Rutherford')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Atlas V'),
+        (select engine.engineId from engine where engine.engineName = 'RD-180')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Athena'),
+        (select engine.engineId from engine where engine.engineName = 'ORBUS 21D')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Miura 5'),
+        (select engine.engineId from engine where engine.engineName = 'TEPREL-C')
     );
 
 -- launchLocation
