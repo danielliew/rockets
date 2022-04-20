@@ -18,7 +18,9 @@ values
     (uuid(), 'SpaceX'),
     (uuid(), 'United Launch Alliance'),
     (uuid(), 'Rocket Lab'),
-    (uuid(), 'Relativity Space');
+    (uuid(), 'Relativity Space'),
+    (uuid(), 'PLD Space'),
+    (uuid(), 'Vector Launch');
 
 -- engineType
 insert into engineType 
@@ -91,6 +93,29 @@ values
         'Liquid Fuel',
         'RD-180', /*Atlas V*/
         1688
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Lockheed Martin'),
+        'HTPB',
+        'ORBUS 21D', /*Athena*/
+        194
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'PLD Space'),
+        'LOX',
+        'TEPREL-C', /*Miura 5*/
+        45
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Vector Launch'),
+        'LOX',
+        'LP-1', /*Vector-R*/
+        85
         
     );
 
@@ -187,6 +212,85 @@ values
         '2018-05-11',
         'Operational',
         '2'
+
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Northrop Grumman Innovation Systems'),
+        'LEO',
+        'Antares',
+        43,  /*Antares*/
+        3.9,
+        298,
+        '2013-04-21',
+        'Operational',
+        '3'
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Rocket Lab'),
+        'LEO',
+        'Electron',
+        18,  /*Electron*/
+        1.2,
+        300,
+        '2017-05-01',
+        'Operational',
+        '2'
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'United Launch Alliance'),
+        'TMI',
+        'Atlas V',
+        58.3,  /*Atlas V*/
+        3.81,
+        590,
+        '2002-08-21',
+        'Operational',
+        '2 + 0-5'
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Lockheed Martin'),
+        'TLI',
+        'Athena',
+        30.48,  /*Athena*/
+        2.36,
+        120,
+        '1995-08-15',
+        'Retired',
+        '2 or 3'
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'PLD Space'),
+        'LEO',
+        'Miura 5',
+        29.4, /*Miura 5*/
+        1.8,
+        32,
+        '2024-01-01',
+        'Development',
+        '3'
+        
+    ),
+    (
+        uuid(),
+        (select company.companyId from company where company.companyName = 'Vector Launch'),
+        'LEO',
+        'Vector-R',
+        12, /*Vector-R*/
+        1.2,
+        5,
+        '2023-01-01',
+        'Development',
+        '2/3'
+        
     );
 
 -- rocketEngine
@@ -215,6 +319,26 @@ values
     (
         (select rocket.rocketId from rocket where rocket.rocketName = 'Terran 1'),
         (select engine.engineId from engine where engine.engineName = 'Aeon 1')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Antares'),
+        (select engine.engineId from engine where engine.engineName = 'RD-181')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Electron'),
+        (select engine.engineId from engine where engine.engineName = 'Rutherford')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Atlas V'),
+        (select engine.engineId from engine where engine.engineName = 'RD-180')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Athena'),
+        (select engine.engineId from engine where engine.engineName = 'ORBUS 21D')
+    ),
+    (
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Miura 5'),
+        (select engine.engineId from engine where engine.engineName = 'TEPREL-C')
     );
 
 -- launchLocation
