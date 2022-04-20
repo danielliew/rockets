@@ -410,6 +410,42 @@ values
         'Success',
         '2019-06-25',
         '2019-06-25'
+    )
+    (
+        uuid(),
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Atlas V'),
+        (select launchLocation.locationId from launchLocation where launchLocation.locationName = 'Cape Canaveral Space Force Station'),
+        "First Atlas V launch",
+        'Success',
+        '2002-08-21',
+        '2002-08-21'
+    ),
+    (
+        uuid(),
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Atlas V'),
+        (select launchLocation.locationId from launchLocation where launchLocation.locationName = 'Cape Canaveral Space Force Station'),
+        "First satellite for Greece and Cyprus",
+        'Success',
+        '2003-05-13',
+        '2003-05-13'
+    )
+    ,(
+        uuid(),
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Atlas V'),
+        (select launchLocation.locationId from launchLocation where launchLocation.locationName = 'Cape Canaveral Space Force Station'),
+        "First Atlas V launch with SRBs",
+        'Success',
+        '2003-07-17',
+        '2003-07-17'
+    ),
+    (
+        uuid(),
+        (select rocket.rocketId from rocket where rocket.rocketName = 'Atlas V'),
+        (select launchLocation.locationId from launchLocation where launchLocation.locationName = 'Cape Canaveral Space Force Station'),
+        "Decemeber 2004 Atlas V launch",
+        'Success',
+        '2004-12-17',
+        '2004-12-17'
     );
 
 -- customer
@@ -422,6 +458,7 @@ values
     (uuid(), 'Axiom Space', 'Houston, TX', null, null);
     (uuid(), 'Arabsat', 'Riyadh, Saudi Arabia', null, null);
     (uuid(), 'United States Department of Defense', '1000 Defense Pentagon, Washington, DC 20301-1000', null, null);
+    (uuid(), 'United Launch Alliance', 'Galileo Operations Center 9501 East Panorama Circle Centennial, CO 80112', 'Tory', 'contact.us@ulalaunch.com');
 
 -- payload
 insert into payload 
@@ -450,14 +487,14 @@ values
     ),
     (
         uuid(), 
-        (select customer.customerId from customer where customer.customerName = 'SpaceX'),
+        (select customer.customerId from customer where customer.customerName = 'Arabsat'),
         "Arabsat-6A",
         6465,
         '2019-04-11'
     ),
     (
         uuid(), 
-        (select customer.customerId from customer where customer.customerName = 'SpaceX'),
+        (select customer.customerId from customer where customer.customerName = 'United States Department of Defense'),
         "USAF STP-2",
         3700,
         '2019-06-25'
@@ -468,6 +505,34 @@ values
         "Crew Dragon Endeavour",
         4201,
         null
+    )
+    (
+        uuid(), 
+        (select customer.customerId from customer where customer.customerName = 'United Launch Alliance'),
+        "Hot Bird 6",
+        3905,
+        '2002-08-21'
+    ),
+    (
+        uuid(), 
+        (select customer.customerId from customer where customer.customerName = 'United Launch Alliance'),
+        "Hellas Sat 2",
+        3450,
+        '2003-05-13'
+    )
+    ,(
+        uuid(), 
+        (select customer.customerId from customer where customer.customerName = 'United Launch Alliance'),
+        "Rainbow-1",
+        4328,
+        '2003-07-17'
+    )
+    ,(
+        uuid(), 
+        (select customer.customerId from customer where customer.customerName = 'United Launch Alliance'),
+        "AMC-16",
+        4,065,
+        '2004-12-17'
     );
 
 -- missionPayload
@@ -497,6 +562,22 @@ values
     (
         (select mission.missionId from mission where mission.missionName = 'Axiom 1'),
         (select payload.payloadId from payload where payload.payload = "Crew Dragon endeavour")
+    ),
+    (
+        (select mission.missionId from mission where mission.missionName = 'First Atlas V launch'),
+        (select payload.payloadId from payload where payload.payload = "Hot Bird 6")
+    ),
+    (
+        (select mission.missionId from mission where mission.missionName = 'First satellite for Greece and Cyprus'),
+        (select payload.payloadId from payload where payload.payload = "Hellas Sat 2")
+    ),
+    (
+        (select mission.missionId from mission where mission.missionName = 'First Atlas V launch with SRBs'),
+        (select payload.payloadId from payload where payload.payload = "Rainbow-1")
+    ),
+    (
+        (select mission.missionId from mission where mission.missionName = 'Decemeber 2004 Atlas V launch'),
+        (select payload.payloadId from payload where payload.payload = "AMC-16")
     );
 
 commit;
