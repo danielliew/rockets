@@ -56,10 +56,15 @@ select count(*) as 'count', launchLocation.locationName from launchLocation
     order by count desc
     limit 1
 
--- 9. 
+-- 9.  What is the address for all the launch locations
 
+select address from launchLocation;
 
+-- 10. List rockets whose height is in the list of tallest rockets produced by every company
 
-
--- 10.  
-
+select rocketName, height, diameter from rocket
+    where height in (
+        select max(rocket1.height) from rocket rocket1
+            where rocket1.companyId = rocket.companyId
+            group by rocket1.companyId
+    )

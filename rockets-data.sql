@@ -352,7 +352,12 @@ values
     (uuid(), 'Launch Site One', 'Van Hron, TX 79855'),
     (uuid(), 'John F. Kennedy Space Center', 'Merritt Island, FL 32899'),
     (uuid(), 'Launch Complex 39A', 'Merritt Island, FL 32899'),
-    (uuid(), 'LC-39A', 'Merritt Island, FL 32899');
+    (uuid(), 'LC-39A', 'Merritt Island, FL 32899'),
+    (uuid(), 'Vandenberg Space Force Base', 'Vandenberg Space Force Base, CA, U.S'),
+    (uuid(), 'Alcântara Space Center', 'Alcântara Space Center, Brazil'),
+    (uuid(), 'Kalpustin Yar', 'Kalpustin Yar, Russia'),
+    (uuid(), 'Kosmodrom Plesetsk', 'Arkhangelsk Oblast, Russia, 164268'),
+    (uuid(), 'Satish Dhawan Space Centre', 'Satish Dhawan Space Centre, Sriharikota, Andhra Pradesh 524124, India');
 
 -- mission
 insert into mission 
@@ -411,7 +416,7 @@ values
         'Success',
         '2019-06-25',
         '2019-06-25'
-    )
+    ),
     (
         uuid(),
         (select rocket.rocketId from rocket where rocket.rocketName = 'Atlas V'),
@@ -429,8 +434,8 @@ values
         'Success',
         '2003-05-13',
         '2003-05-13'
-    )
-    ,(
+    ),
+    (
         uuid(),
         (select rocket.rocketId from rocket where rocket.rocketName = 'Atlas V'),
         (select launchLocation.locationId from launchLocation where launchLocation.locationName = 'Cape Canaveral Space Force Station'),
@@ -458,11 +463,11 @@ values
     (uuid(), 'Virgin Orbit', '4022 E Conant St, Long Beach, CA 90808','Dan Hart','ceo@virginorbit.com'),
     (uuid(), 'Axiom Space', 'Houston, TX', null, null),
     (uuid(), 'Arabsat', 'Riyadh, Saudi Arabia', 'Arab League', null),
-    (uuid(), 'United States Department of Defense', '3101 Maguire Blvd # 244, Orlando, FL 32803', null, null);
-    (uuid(), 'Axiom Space', 'Houston, TX', null, null);
-    (uuid(), 'Arabsat', 'Riyadh, Saudi Arabia', null, null);
-    (uuid(), 'United States Department of Defense', '1000 Defense Pentagon, Washington, DC 20301-1000', null, null);
-    (uuid(), 'United Launch Alliance', 'Galileo Operations Center 9501 East Panorama Circle Centennial, CO 80112', 'Tory', 'contact.us@ulalaunch.com');
+    (uuid(), 'United States Department of Defense', '1000 Defense Pentagon, Washington, DC 20301-1000', null, null),
+    (uuid(), 'United Launch Alliance', 'Galileo Operations Center 9501 East Panorama Circle Centennial, CO 80112', 'Tory', 'contact.us@ulalaunch.com'),
+    (uuid(), 'National Aeronautics and Space Administration', 'NASA Headquarters, Washington DC 20546-0001', null, null),
+    (uuid(), 'Roscosmos', '42 Schepkina Street 107996 Korolev, Moscow Region Russia', null, null),
+    (uuid(), 'China National Space Administration', 'China, Beijing, Haidian District, Fucheng Rd, 阜成路甲8 邮政编码: 100037', null, null);
 
 -- payload
 insert into payload 
@@ -502,7 +507,7 @@ values
         "USAF STP-2",
         3700,
         '2019-06-25'
-    )
+    ),
     (
         uuid(), 
         (select customer.customerId from customer where customer.customerName = 'Axiom Space'),
@@ -510,20 +515,6 @@ values
         4201,
         null
     ),
-    (
-        uuid(), 
-        (select customer.customerId from customer where customer.customerName = 'SpaceX'),
-        "Arabsat-6A",
-        64665,
-        '2019-04-11'
-    ),
-    (
-        uuid(), 
-        (select customer.customerId from customer where customer.customerName = 'SpaceX'),
-        "USAF STP-2",
-        3700,
-        '2019-06-25'
-    )
     (
         uuid(), 
         (select customer.customerId from customer where customer.customerName = 'United Launch Alliance'),
@@ -537,19 +528,19 @@ values
         "Hellas Sat 2",
         3450,
         '2003-05-13'
-    )
-    ,(
+    ),
+    (
         uuid(), 
         (select customer.customerId from customer where customer.customerName = 'United Launch Alliance'),
         "Rainbow-1",
         4328,
         '2003-07-17'
-    )
-    ,(
+    ),
+    (  
         uuid(), 
         (select customer.customerId from customer where customer.customerName = 'United Launch Alliance'),
         "AMC-16",
-        4,065,
+        4065,
         '2004-12-17'
     );
 
@@ -571,10 +562,6 @@ values
     ),
     (
         (select mission.missionId from mission where mission.missionName = 'April 2019 Falcon Heavy Arabsat Flight'),
-        (select payload.payloadId from payload where payload.payload = "Arabsat-6A")
-    ),
-    (
-        (select mission.missionId from mission where mission.missionName = 'June 2019 Falcon Heavy USAF Flight'),
         (select payload.payloadId from payload where payload.payload = "Arabsat-6A")
     ),
     (
