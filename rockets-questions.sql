@@ -35,7 +35,7 @@ select round(
 
 -- 5.  What is the sum of all the payload weight?
 
-select sum(weight) as 'totalWeight', from payload;
+select sum(weight) as 'totalWeight' from payload;
 
 -- 6.  How many rockets have "Falcon" in their name?
 
@@ -46,7 +46,7 @@ select * from rocket where rocket.rocketName like "%Falcon%";
 select count(*) as 'count', customer.customerName from customer
 	left join payload on payload.customerId = customer.customerId
     group by customer.customerId
-    having count >1;
+    having count > 1;
 
 -- 8.  what is the most common launch location?
 
@@ -54,7 +54,7 @@ select count(*) as 'count', launchLocation.locationName from launchLocation
 	left join mission on mission.locationId = launchLocation.locationId
     group by launchLocation.locationId
     order by count desc
-    limit 1
+    limit 1;
 
 -- 9.  What is the address for all the launch locations
 
@@ -67,4 +67,4 @@ select rocketName, height, diameter from rocket
         select max(rocket1.height) from rocket rocket1
             where rocket1.companyId = rocket.companyId
             group by rocket1.companyId
-    )
+    );
