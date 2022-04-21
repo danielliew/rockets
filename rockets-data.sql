@@ -350,13 +350,9 @@ insert into launchLocation
 values 
     (uuid(), 'Cape Canaveral Space Force Station', 'Cape Canaveral, FL 32920'),
     (uuid(), 'Launch Site One', 'Van Hron, TX 79855'),
-<<<<<<< HEAD
     (uuid(), 'John F. Kennedy Space Center', 'Merritt Island, FL 32899'),
-    (uuid(), 'Launch Complex 39A', 'Merritt Island, FL 32899'); 
-=======
-    (uuid(), 'John F. Kennedy Space Center', 'Merritt Island, FL 32899');
+    (uuid(), 'Launch Complex 39A', 'Merritt Island, FL 32899'),
     (uuid(), 'LC-39A', 'Merritt Island, FL 32899');
->>>>>>> d52bb0d3d4539da7f06c519789afc15bae04c677
 
 -- mission
 insert into mission 
@@ -402,11 +398,7 @@ values
         uuid(),
         (select rocket.rocketId from rocket where rocket.rocketName = 'Falcon Heavy'),
         (select launchLocation.locationId from launchLocation where launchLocation.locationName = 'John F. Kennedy Space Center'),
-<<<<<<< HEAD
-        "April 2019 Falcon Heavy Arabsat Flight",
-=======
         "April 2019 Falcon Heavy Arabsat flight",
->>>>>>> d52bb0d3d4539da7f06c519789afc15bae04c677
         'Success',
         '2019-04-11',
         '2019-04-11'
@@ -414,13 +406,6 @@ values
     (
         uuid(),
         (select rocket.rocketId from rocket where rocket.rocketName = 'Falcon Heavy'),
-<<<<<<< HEAD
-        (select launchLocation.locationId from launchLocation where launchLocation.locationName = 'Launch Complex 39A'),
-        "June 2019 Falcon Heavy USAF Flight",
-        'Success',
-        '2019-06-25',
-        '2019-06-25'
-=======
         (select launchLocation.locationId from launchLocation where launchLocation.locationName = 'LC-39A'),
         "June 2019 Falcon Heavy test USAF flight",
         'Success',
@@ -462,7 +447,6 @@ values
         'Success',
         '2004-12-17',
         '2004-12-17'
->>>>>>> d52bb0d3d4539da7f06c519789afc15bae04c677
     );
 
 -- customer
@@ -472,16 +456,13 @@ values
     (uuid(), 'SpaceX', '1 Rocket Road, Hawthorne, CA', 'Elon Musk', 'ceo@spacex.com'),
     (uuid(), 'Blue Origin', '21601 76th Ave S, Kent, WA 98032', 'Jeff Bezos','ceo@blueorigin.com'),
     (uuid(), 'Virgin Orbit', '4022 E Conant St, Long Beach, CA 90808','Dan Hart','ceo@virginorbit.com'),
-<<<<<<< HEAD
     (uuid(), 'Axiom Space', 'Houston, TX', null, null),
     (uuid(), 'Arabsat', 'Riyadh, Saudi Arabia', 'Arab League', null),
     (uuid(), 'United States Department of Defense', '3101 Maguire Blvd # 244, Orlando, FL 32803', null, null);
-=======
     (uuid(), 'Axiom Space', 'Houston, TX', null, null);
     (uuid(), 'Arabsat', 'Riyadh, Saudi Arabia', null, null);
     (uuid(), 'United States Department of Defense', '1000 Defense Pentagon, Washington, DC 20301-1000', null, null);
     (uuid(), 'United Launch Alliance', 'Galileo Operations Center 9501 East Panorama Circle Centennial, CO 80112', 'Tory', 'contact.us@ulalaunch.com');
->>>>>>> d52bb0d3d4539da7f06c519789afc15bae04c677
 
 -- payload
 insert into payload 
@@ -528,7 +509,6 @@ values
         "Crew Dragon Endeavour",
         4201,
         null
-<<<<<<< HEAD
     ),
     (
         uuid(), 
@@ -543,7 +523,6 @@ values
         "USAF STP-2",
         3700,
         '2019-06-25'
-=======
     )
     (
         uuid(), 
@@ -572,7 +551,6 @@ values
         "AMC-16",
         4,065,
         '2004-12-17'
->>>>>>> d52bb0d3d4539da7f06c519789afc15bae04c677
     );
 
 -- missionPayload
@@ -592,19 +570,15 @@ values
         (select payload.payloadId from payload where payload.payload = "Elon Musk's Tesla Roadster")
     ),
     (
-<<<<<<< HEAD
         (select mission.missionId from mission where mission.missionName = 'April 2019 Falcon Heavy Arabsat Flight'),
         (select payload.payloadId from payload where payload.payload = "Arabsat-6A")
     ),
     (
         (select mission.missionId from mission where mission.missionName = 'June 2019 Falcon Heavy USAF Flight'),
-=======
-        (select mission.missionId from mission where mission.missionName = 'April 2019 Falcon Heavy Arabsat flight'),
         (select payload.payloadId from payload where payload.payload = "Arabsat-6A")
     ),
     (
         (select mission.missionId from mission where mission.missionName = 'June 2019 Falcon Heavy test USAF flight'),
->>>>>>> d52bb0d3d4539da7f06c519789afc15bae04c677
         (select payload.payloadId from payload where payload.payload = "USAF STP-2")
     ),
     (
